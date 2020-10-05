@@ -23,7 +23,3 @@ int [] getPrimesArr(int n){
     }
     return primes;
 }
-
-
-
-// print primes lower than n
