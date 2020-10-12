@@ -35,6 +35,10 @@ boolean checkBarcode (String barcode){
         weightThree = !weightThree;
     }
     int checkDigit = 10 - checkSum % 10;
+    // handle check digit eqal 10 case
+    if (checkDigit == 10){
+        checkDigit = 0;
+    }
     // compare check digit with the actual check digit
     if (checkDigit != Character.getNumericValue(barcode.charAt(len - 1))){
         return false;
